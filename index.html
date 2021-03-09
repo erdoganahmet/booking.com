@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Booking.com | Official site | The best hotels & accommodations
+    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="scss/helper/normalize.css" />
+    <link rel="stylesheet" href="scss/helper/formalize.css" />
+    <link rel="stylesheet" href="scss/plugin/flickity.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
+  </head>
+  <body>
+    <svg
+      aria-hidden="true"
+      style="position: absolute; width: 0; height: 0; overflow: hidden"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-menu" viewBox="0 0 24 24">
+          <path
+            d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"
+          ></path>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 24 24">
+          <path
+            d="M17.464 6.56a8.313 8.313 0 1 1-15.302 6.504A8.313 8.313 0 0 1 17.464 6.56zm1.38-.586C16.724.986 10.963-1.339 5.974.781.988 2.9-1.337 8.662.783 13.65c2.12 4.987 7.881 7.312 12.87 5.192 4.987-2.12 7.312-7.881 5.192-12.87zM15.691 16.75l7.029 7.03a.75.75 0 0 0 1.06-1.06l-7.029-7.03a.75.75 0 0 0-1.06 1.06z"
+          ></path>
+        </symbol>
+        <symbol id="icon-date" viewBox="0 0 24 24">
+          <path
+            d="M22.502 13.5v8.25a.75.75 0 0 1-.75.75h-19.5a.75.75 0 0 1-.75-.75V5.25a.75.75 0 0 1 .75-.75h19.5a.75.75 0 0 1 .75.75v8.25zm1.5 0V5.25A2.25 2.25 0 0 0 21.752 3h-19.5a2.25 2.25 0 0 0-2.25 2.25v16.5A2.25 2.25 0 0 0 2.252 24h19.5a2.25 2.25 0 0 0 2.25-2.25V13.5zm-23.25-3h22.5a.75.75 0 0 0 0-1.5H.752a.75.75 0 0 0 0 1.5zM7.502 6V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0zm10.5 0V.75a.75.75 0 0 0-1.5 0V6a.75.75 0 0 0 1.5 0z"
+          ></path>
+        </symbol>
+        <symbol id="icon-person" viewBox="0 0 24 24">
+          <path
+            d="M16.5 6a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0zM18 6A6 6 0 1 0 6 6a6 6 0 0 0 12 0zM3 23.25a9 9 0 1 1 18 0 .75.75 0 0 0 1.5 0c0-5.799-4.701-10.5-10.5-10.5S1.5 17.451 1.5 23.25a.75.75 0 0 0 1.5 0z"
+          ></path>
+        </symbol>
+        <symbol id="icon-select-arrows" viewBox="0 0 20 20">
+          <path d="M10 1l-5 7h10l-5-7zM10 19l5-7h-10l5 7z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <header class="Header">
+      <div class="container">
+        <a class="Header-logo" href="">
+          <img src="img/site-logo.png" alt="" />
+        </a>
+
+        <div class="Header-menu">
+          <div class="Header-menu-helper">
+            <select>
+              <option value="usd">USD</option>
+              <option value="try">TRY</option>
+            </select>
+            <button class="lang-list">
+              <div class="lang-list-group">
+                <img src="img/america.png" alt="" />
+              </div>
+            </button>
+
+            <a class="helper-contact" href="">
+              <img src="img/contact-logo.png" alt="" />
+            </a>
+          </div>
+
+          <a class="Header-menu-property" href="">List your property</a>
+
+          <div class="Header-menu-user">
+            <a href="">Register</a>
+            <a href="">Sign In</a>
+          </div>
+        </div>
+
+        <button class="Header-switch" type="button">
+          <svg class="icon icon-menu">
+            <use xlink:href="#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <nav class="Navigation">
+      <div class="container">
+        <a class="Navigation-item" href=""
+          ><img src="img/bed.png" alt="" />Stays</a
+        >
+        <a class="Navigation-item" href=""
+          ><img src="img/plane.png" alt="" />Flights</a
+        >
+        <a class="Navigation-item" href=""
+          ><img src="img/car.png" alt="" />Car rentals</a
+        >
+        <a class="Navigation-item" href=""
+          ><img src="img/tourist.png" alt="" />Attractions</a
+        >
+        <a class="Navigation-item" href=""
+          ><img src="img/taxi.png" alt="" /><span>Airport taxis</span></a
+        >
+      </div>
+    </nav>
+
+    <main class="Main">
+      <section class="Showcase">
+        <div class="container">
+          <h1 class="Showcase-title">
+            Find deals on hotels, homes, and much more...
+          </h1>
+          <div class="Showcase-subtitle">
+            From cozy country homes to funky city apartments
+          </div>
+
+          <div class="Search">
+            <form class="Search-form" action="">
+              <div class="form-item form-searchbox">
+                <svg class="icon icon-search">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+                <input
+                  class="text search-text"
+                  type="text"
+                  placeholder="Where are you going?"
+                />
+              </div>
+              <div class="form-item">
+                <svg class="icon icon-date">
+                  <use xlink:href="#icon-date"></use>
+                </svg>
+                <input class="text text-datebox" type="date" />
+              </div>
+              <div class="form-item">
+                <svg class="icon icon-person">
+                  <use xlink:href="#icon-person"></use>
+                </svg>
+                <div class="select">
+                  <svg class="icon icon-select-arrows">
+                    <use xlink:href="#icon-select-arrows"></use>
+                  </svg>
+                  <select class="text">
+                    <option value="">2 adults ∙ 0 children ∙ 1 room</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-btn-search">
+                <button class="btn-search" type="button">Search</button>
+              </div>
+              <div class="cboxTravel">
+                <label class="form-checkbox">
+                  <input type="checkbox" /> I'm traveling for work
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="Carousel">
+        <div class="container">
+          <h2 class="Carousel-group-title">Connect with other travelers</h2>
+          <div class="Carousel-group">
+            <a class="Carousel-group-item" href="">
+              <img src="img/unitedkingdom.jpg" alt="" />
+              <h3 class="carousel-title">United Kingdom</h3>
+              <p class="carousel-subtitle">Travel community</p>
+              <p class="carousel-subtitle">685,908 travelers</p>
+            </a>
+            <a class="Carousel-group-item" href="">
+              <img src="img/kapadokya.jpg" alt="" />
+              <h3 class="carousel-title">Turkey</h3>
+              <p class="carousel-subtitle">Travel community</p>
+              <p class="carousel-subtitle">194,520 travelers</p>
+            </a>
+            <a class="Carousel-group-item" href="">
+              <img src="img/friends.jpg" alt="" />
+              <h3 class="carousel-title">Travel Talk</h3>
+              <p class="carousel-subtitle">General discussion</p>
+              <p class="carousel-subtitle">559,436 travelers</p>
+            </a>
+            <a class="Carousel-group-item" href="">
+              <img src="img/communities.png" alt="" />
+              <h3 class="carousel-title">More communities</h3>
+              <p class="carousel-subtitle">View all</p>
+              <p class="carousel-subtitle">10,103,767 travelers</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="Offer">
+        <div class="container">
+          <div class="Offer-group-1">
+            <div class="Offer-group-1-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Nottingham</h3>
+                  <p>372 properties</p>
+                </div>
+                <div class="postcard-footer">
+                  <span class="price-tag">Average price</span>
+                  <br />
+                  <span>US$177</span>
+                </div>
+                <img src="img/nottingham.webp" alt="" />
+              </a>
+            </div>
+            <div class="Offer-group-1-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Beirut</h3>
+                  <p>206 properties</p>
+                </div>
+                <div class="postcard-footer">
+                  <span class="price-tag">Average price</span>
+                  <br />
+                  <span>US$100</span>
+                </div>
+                <img src="img/beirut.webp" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="Offer-group-2">
+            <div class="Offer-group-2-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Boston</h3>
+                  <p>388 properties</p>
+                </div>
+                <div class="postcard-footer">
+                  <span class="price-tag">Average price</span>
+                  <br />
+                  <span>US$155</span>
+                </div>
+                <img src="img/boston.jpg" alt="" />
+              </a>
+            </div>
+            <div class="Offer-group-2-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Maafushi</h3>
+                  <p>45 properties</p>
+                </div>
+                <div class="postcard-footer">
+                  <span class="price-tag">Average price</span>
+                  <br />
+                  <span>US$67</span>
+                </div>
+                <img src="img/maafushi.jpg" alt="" />
+              </a>
+            </div>
+            <div class="Offer-group-2-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Amsterdam</h3>
+                  <p>1,891 properties</p>
+                </div>
+                <div class="postcard-footer">
+                  <span class="price-tag">Average price</span>
+                  <br />
+                  <span>US$114</span>
+                </div>
+                <img src="img/amsterdam.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Trip">
+        <div class="container">
+          <h2>Get inspiration for your next trip</h2>
+          <div class="Trip-group Trip-group-1">
+            <div class="Trip-group-item Trip-group-1-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>America is for everyone</h3>
+                  <p>
+                    Rediscover cultures and places that unite us as a nation.
+                  </p>
+                </div>
+                <img src="img/americais.jpg" alt="" />
+              </a>
+            </div>
+            <div class="Trip-group-item Trip-group-1-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Safety cleans up</h3>
+                  <p>
+                    Travelers are expecting new health and safety measures to
+                    avoid catching the coronavirus.
+                  </p>
+                </div>
+                <img src="img/safetycleans.jpg" alt="" />
+              </a>
+            </div>
+            <div class="Trip-group-item Trip-group-1-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Vital value: Maximizing travel for less</h3>
+                  <p>
+                    Travelers will prioritize value, booking transparency, and
+                    flexibility.
+                  </p>
+                </div>
+                <img src="img/vitalvalue.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="Trip-group Trip-group-2">
+            <div class="Trip-group-item Trip-group-2-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Bye bye 9-to-5: Work from wherever you want</h3>
+                  <p>
+                    Long-term remote working is making it possible to travel and
+                    set up an office anywhere.
+                  </p>
+                </div>
+                <img src="img/campwork.jpg" alt="" />
+              </a>
+            </div>
+            <div class="Trip-group-item Trip-group-2-item">
+              <a class="postcard" href="">
+                <div class="postcard-header">
+                  <h3>Spontechnaity: How tech will drive travel</h3>
+                  <p>
+                    Travelers are using technology to regain confidence and help
+                    them travel safely.
+                  </p>
+                </div>
+                <img src="img/techphone.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Highlights">
+        <div class="container">
+          <h2>Home guests love</h2>
+          <div class="Highlights-slider">
+            <div class="Highlights-item">
+              <a href="">
+                <img src="img/home1.jpg" alt="" />
+                <h3>Villa Wellness</h3>
+                <p>Budapest</p>
+                <p class="item-price">Starting from US$722</p>
+                <div class="content">
+                  <div class="item-score">9.0</div>
+                  <span>Wonderful</span>
+                  <span>∙</span>
+                  <span>301 reviews</span>
+                </div>
+              </a>
+            </div>
+            <div class="Highlights-item">
+              <a href="">
+                <img src="img/home2.jpg" alt="" />
+                <h3>Apartments on Belinskogo ulitsa</h3>
+                <p>Saint Petersburs</p>
+                <p class="item-price">Starting from US$161</p>
+                <div class="content">
+                  <div class="item-score">9.4</div>
+                  <span>Exceptional</span>
+                  <span>∙</span>
+                  <span>142 reviews</span>
+                </div>
+              </a>
+            </div>
+            <div class="Highlights-item">
+              <a href="">
+                <img src="img/home3.jpg" alt="" />
+                <h3>Appartamento Benincampi</h3>
+                <p>Lisbon</p>
+                <p class="item-price">Starting from US$291</p>
+                <div class="content">
+                  <div class="item-score">9.7</div>
+                  <span>Exceptional</span>
+                  <span>∙</span>
+                  <span>267 reviews</span>
+                </div>
+              </a>
+            </div>
+            <div class="Highlights-item">
+              <a href="">
+                <img src="img/home4.jpg" alt="" />
+                <h3>Sugar Loft Apartments</h3>
+                <p>Rino de Janeiro</p>
+                <p class="item-price">Starting from US$325</p>
+                <div class="content">
+                  <div class="item-score">9.5</div>
+                  <span>Wonderful</span>
+                  <span>∙</span>
+                  <span>189 reviews</span>
+                </div>
+              </a>
+            </div>
+            <div class="Highlights-item">
+              <a href="">
+                <img src="img/home5.jpg" alt="" />
+                <h3>Sugar Loft Apartments</h3>
+                <p>Rino de Janeiro</p>
+                <p class="item-price">Starting from US$49</p>
+                <div class="content">
+                  <div class="item-score">8.8</div>
+                  <span>Wonderful</span>
+                  <span>∙</span>
+                  <span>301 reviews</span>
+                </div>
+              </a>
+            </div>
+            <div class="Highlights-item discover">
+              <a class="discover-content" href="">
+                <p class="discover-content-title">
+                  We have a lot more homes and apartments we think you'll love!
+                </p>
+                <div class="discover-content-btn">
+                  <button class="discover-content-btn-homes">
+                    Discover homes
+                  </button>
+                </div>
+                <img
+                  class="discover-content-img"
+                  src="img/discover.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="FooterForm">
+        <div class="container">
+          <h2 class="FooterForm-title">Save time, save money!</h2>
+          <div class="FooterForm-subtitle">
+            Sign up and we'll send the best deals to you
+          </div>
+          <form class="FooterForm-forms" action="">
+            <input class="text" type="text" placeholder="Your email" />
+            <button class="btn-subscribe">Subscribe</button>
+            <label class="form-checkbox">
+              <input type="checkbox" /> Send me a link to get the FREE
+              Booking.com app!
+            </label>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="Footer">
+      <div class="container">
+        <p>
+          Booking.com is part of Booking Holdings Inc., the world leader in
+          online travel & related services.
+        </p>
+        <ul class="group-logos">
+          <li
+            class="group-logos-item booking"
+            style="
+              background-image: url(img/pcln-group-logos.png);
+              background-repeat: no-repeat;
+              width: 97px;
+            "
+          ></li>
+          <li
+            class="group-logos-item kayak"
+            style="
+              background-image: url(img/pcln-group-logos2.png);
+              background-repeat: no-repeat;
+              width: 95px;
+            "
+          ></li>
+          <li
+            class="group-logos-item opentable"
+            style="
+              background-image: url(img/pcln-group-logos5.png);
+              background-repeat: no-repeat;
+              width: 103px;
+            "
+          ></li>
+          <li
+            class="group-logos-item priceline"
+            style="
+              background-image: url(img/pcln-group-logos1.png);
+              background-repeat: no-repeat;
+              width: 97px;
+            "
+          ></li>
+          <li
+            class="group-logos-item agoda"
+            style="
+              background-image: url(img/pcln-group-logos3.png);
+              background-repeat: no-repeat;
+              width: 77px;
+            "
+          ></li>
+          <li
+            class="group-logos-item rentalcars"
+            style="
+              background-image: url(img/pcln-group-logos4.png);
+              background-repeat: no-repeat;
+              width: 130px;
+            "
+          ></li>
+        </ul>
+        <div class="Footer-subtitle">
+          Copyright © 1996–2021 Booking.com™. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

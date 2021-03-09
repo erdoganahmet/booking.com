@@ -1,0 +1,200 @@
+.Header {
+    height: 64px;
+    background-color: $color-navy;
+
+    .container {
+        position: relative;
+        display: flex;
+        // Dikeyde hizalama
+        align-items: center;
+        height: 100%;
+    }
+
+    &-menu {
+        // tıklanabilirliği kaldırır
+        pointer-events: none;
+        opacity: 0;
+        //transform: translateX(100%);
+        transition: .2s;
+        display: flex;
+        // Alt alta diziyoruz
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        background-color: $color-navy;
+        box-shadow: 0 20px 30px rgba(black, .2);
+        font-weight: bold;
+        // bunu eklemeden önce menü açıldığında, eğer uzanıyorsa inputların altında kalıyordu.
+        z-index: 1;
+
+        .Header.menu-show & {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        @include mq {
+            opacity: 1;
+            transform: translateX(0);
+            transition: 0s;
+            // auto sağa hizaladı
+            margin-left: auto;
+            flex-direction: row;
+            // position ile alakalı daha önce tanımlanmış left right top değerlerini kaldırıyor.
+            position: initial;
+            box-shadow: none;
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+            pointer-events: auto;
+            align-items: center;
+        }
+
+        a {
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 7px;
+            padding-right: 7px;
+            font-size: $font-size;
+            color: white;
+            border: 1px solid white;
+            height: $finger-size;
+            border-radius: $btn-radius;
+            margin-right: 11px;
+        }
+
+        &-user {
+            display: flex;
+            flex-direction: column;
+
+            @include mq {
+                flex-direction: row;
+            }
+
+            a {
+                margin-top: 10px;
+                margin-right: 11px;
+                display: inline-flex;
+                align-items: center;
+                padding-left: 15px;
+                padding-right: 15px;
+                background-color: #eee;
+                border: 1px solid $color-blue;
+                color: $color-blue;
+
+                @include mq {
+                    margin-top: 0px;
+                    min-width: 79px;
+                    width: auto;
+                }
+
+                &:hover {
+                    background-color: #e4f4ff;
+                }
+            }
+        }
+
+        &-property {
+            margin-top: 10px;
+
+            @include mq {
+                margin-top: 0;
+            }
+
+            &:hover {
+                background-color: rgba(189,189,189,0.12);
+            }
+        }
+
+        &-helper {
+            display: flex;
+            // Yatay eksende ortaya getiriyoruz
+            justify-content: center;
+
+            select, a {
+                background-color: transparent;
+                border: none;
+                border-radius: $btn-radius;
+                color: white;
+                appearance: none;
+                padding-left: 11px;
+                padding-right: 11px;
+                font-weight: bold;
+                margin-right: 11px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(189,189,189,0.12);
+                }
+            }
+
+            select option {
+                color: black;
+            }
+
+            .helper-contact {
+                margin-left: 11px;
+                width: 48px;
+                height: 48px;
+            }
+
+            .lang-list {
+                background-color: transparent;
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(189,189,189,0.12);
+                }
+                
+                &-group {
+                    width: 24px;
+                    height: 24px;
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        // border-radius: 50%; clip path ile aynı
+                        clip-path: circle(50%);
+                    }
+                }
+            }
+        }
+    }
+
+    // svg renklendirme hakkında dk 1:50:55: https://www.youtube.com/watch?v=1AhFCvWS-XE
+    &-switch {
+        @include mq {
+            display: none;
+        }
+        position: relative;
+        left: 6px;
+        background-color: transparent;
+        color: white;
+        // Sağa yaslıyor
+        margin-left: auto;
+        display: flex;
+        // Dikeyde ortalama
+        align-items: center;
+        // Yatayda ortalama
+        justify-content: center;
+        height: $finger-size;
+        width: $finger-size;
+
+        // &:focus {
+        //    outline-style: none;
+        // }
+    }
+}

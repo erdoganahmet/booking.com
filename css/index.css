@@ -1,0 +1,32 @@
+.Showcase {
+  color: #333;
+  background: #f5f5f5;
+}
+
+.Showcase .container {
+  background: #f5f5f5;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.Showcase .container h1 {
+  font-size: 24px;
+}
+
+.Showcase .Search {
+  background-color: #febb02;
+  padding: 4px;
+}
+
+.Showcase .Search-form {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Showcase .Search .cboxTravel {
+  position: absolute;
+  left: 0;
+}
+/*# sourceMappingURL=index.css.map */

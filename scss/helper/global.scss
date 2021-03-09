@@ -1,0 +1,126 @@
+body {
+    font-family: $font-family;
+}
+
+.container {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+.text {
+    font-family: inherit;
+    border: 0;
+    height: 52px;
+    border-radius: $btn-radius;
+    color: #333;
+    background-color: white;
+    font-weight: bold;
+    font-size: $font-size;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+}
+
+.form-item {
+    position: relative;
+    margin-bottom: 4px;
+
+    @include mq {
+        margin-bottom: 0;
+        margin-right: 4px;
+    }
+
+    .icon {
+        pointer-events: none;
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .text{
+        padding-left: 60px;
+        width: 100%;
+
+        &:hover, &:focus{
+            outline-color: #c99300c4;
+            outline-style:outset;
+            outline-width: 2px;
+        }
+    }
+
+    .search-text{
+        cursor: initial;
+
+        &::placeholder {
+            color: #333;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: gray;
+            }
+        }
+    }  
+
+    .select {
+        select {
+            appearance: none;
+            margin-right: 20px;
+        }
+        
+        .icon-select-arrows {
+            pointer-events: none;
+            position: absolute;
+            left: 90%;
+            color: $color-blue;
+            font-size: 14px;
+            width: 1em;
+            height: 1em;
+        }
+    }
+}
+
+.btn-search {
+    color: white;
+    background-color: $color-blue;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: $btn-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #005999;
+    }
+
+    @include mq {
+        height: 100%;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+.form-searchbox {
+    @include mq {
+        display: flex;
+        flex-grow: 1;
+    }
+}
